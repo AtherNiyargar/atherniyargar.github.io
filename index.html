@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #dcadff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            background: rgb(144, 121, 255);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .project-info {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .project-title {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column !important;
+            }
+
+            .project-image, .project-info {
+                width: 100%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ather Niyargar</h1>
+        <p>Software Developer</p>
+    </header>
+
+    <div class="container">
+        <div class="project">
+            <div class="project-image">
+                <img src="/api/placeholder/400/300" alt="Project 1">
+            </div>
+            <div class="project-info">
+                <h2 class="project-title">E-commerce Platform</h2>
+                <p class="project-description">A full-featured e-commerce platform built with modern technologies. Includes user authentication, product management, and payment integration.</p>
+                <p class="project-tech">Technologies: React, Node.js, MongoDB</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <img src="/api/placeholder/400/300" alt="Project 2">
+            </div>
+            <div class="project-info">
+                <h2 class="project-title">Task Management App</h2>
+                <p class="project-description">A collaborative task management application with real-time updates and team functionality.</p>
+                <p class="project-tech">Technologies: Vue.js, Firebase, Express</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <img src="/api/placeholder/400/300" alt="Project 3">
+            </div>
+            <div class="project-info">
+                <h2 class="project-title">Weather Dashboard</h2>
+                <p class="project-description">A weather application that provides real-time weather data and forecasts for multiple locations.</p>
+                <p class="project-tech">Technologies: JavaScript, OpenWeather API, Bootstrap</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:john.doe@example.com">atherniargar@gmail.com</a>
+            <a href="https://github.com/AtherNiyargar">GitHub: @AtherNiyargar</a>
+            <a href="https://linkedin.com/in/AtherNiyargar">LinkedIn: Ather Niyargar</a>
+            <a href="tel:+919024779695">Phone: +91 9024779695</a>
+        </div>
+    </footer>
+</body>
+</html>
