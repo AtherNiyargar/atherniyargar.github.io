@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ather Niyargar</title>
     <style>
+	
+	@font-face {
+    font-family: 'ChonkyBrush';
+    src: url('FONT/Chonky Brush.ttf') format('truetype');
+	}
+	
+	@font-face {
+    font-family: 'cascadia';
+    src: url('FONT/CascadiaCode-Regular-VTT.ttf') format('truetype');
+	}
+	
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +24,7 @@
         }
 
         body {
-            background-color: #dcadff;
+            background-color: #ffa20014;
             line-height: 1.6;
         }
 
@@ -21,12 +32,13 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem;
+            <-- padding: 2rem; -->
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+			text-align:center;
         }
 
         .container {
@@ -118,12 +130,33 @@
                 gap: 1rem;
             }
         }
+		
+		
+		.blink {
+            font-size: 40px;
+            font-family: cascadia; /* Monospace font for the underscore */
+            display: inline-block;
+            animation: blink-animation 1s step-start infinite; /* Apply animation */
+			display:inline-block;
+        }
+		@keyframes blink-animation {
+            50% {
+                opacity: 0; /* Makes the underscore invisible at halfway point */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ather Niyargar</h1>
-        <p>Software Developer</p>
+        <h1 style="font-family: 'ChonkyBrush', sans-serif; font-size:450%; font-weight:300; letter-spacing:0.01em; line-height:1.2; padding-top:90px; text-align:center;">Ather Niyargar</h1>
+        <p style="font-family: 'cascadia', sans-serif; font-size:200%; display:inline; padding-bottom:50%;">Software Developer<div class = "blink">_</div>
+		</p>
+		<div style="font-family:'cascadia'; text-align:center; justify-content:center; padding-bottom:8%; font-family:cascadia;">
+		<p style="padding-top:5%; font-family:cascadia; font-size: 150%;;">My name is Ather Niyargar, and I am from Chittorgarh.</p>
+		<p style="font-family:cascadia; font-size: 150%;">I am a BCA Graduate from Chittorgarh, having a strong programming foundation built with C programming.</p>
+		<p style="font-family:cascadia; font-size: 150%;">I have made projects in C, C++, Java, Python, C#, and Dart.</p>
+		
+		</div>
     </header>
 
     <div class="container">
@@ -164,7 +197,7 @@
     <footer>
         <h2>Contact Me</h2>
         <div class="contact-info">
-            <a href="mailto:john.doe@example.com">atherniargar@gmail.com</a>
+            <a href="mailto:atherniargar@gmail.com">atherniargar@gmail.com</a>
             <a href="https://github.com/AtherNiyargar">GitHub: @AtherNiyargar</a>
             <a href="https://linkedin.com/in/AtherNiyargar">LinkedIn: Ather Niyargar</a>
             <a href="tel:+919024779695">Phone: +91 9024779695</a>
