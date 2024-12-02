@@ -29,13 +29,13 @@
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: #000000;;
             color: white;
             text-align: center;
             <-- padding: 2rem; -->
         }
 
-        h1 {
+        h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
 			text-align:center;
@@ -50,7 +50,7 @@
         .project {
             display: flex;
             align-items: center;
-            background: rgb(144, 121, 255);
+            background: #142f40;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
@@ -78,20 +78,27 @@
         }
 
         .project-title {
-            color: #2c3e50;
+            color: #f1f6f6;
             margin-bottom: 1rem;
+			
         }
 
         .project-description {
-            color: #666;
+            color: #fa9374;
             margin-bottom: 1rem;
+			font-family: 'cascadia';
+			font-size: 125%;
         }
 
         .project-tech {
             color: #2c3e50;
             font-weight: bold;
+			transition: font-size 0.1s ease;
         }
-
+		.project-tech:hover{
+		font-size:150%;
+		}
+		
         footer {
             background-color: #2c3e50;
             color: white;
@@ -144,15 +151,251 @@
                 opacity: 0; /* Makes the underscore invisible at halfway point */
             }
         }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+:root {
+  --clr-1: #00c2ff;
+  --clr-2: #0062ff;
+  --clr-3: #52ff4c;
+  --clr-4: #ffc640;
+
+  --blur: 1rem;
+  --fs: clamp(3rem, 8vw, 7rem);
+  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+}
+
+body {
+  min-height: 100vh;
+  place-items: center;
+  background-color: var(--bg);
+  color: #fff;
+  font-family: "Inter", "DM Sans", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs);
+  font-weight: 800;
+  letter-spacing: var(--ls);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  margin: 0;
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: darken;
+  pointer-events: none;
+}
+
+.aurora__item {
+  overflow: hidden;
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background-color: var(--clr-1);
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  filter: blur(var(--blur));
+  mix-blend-mode: overlay;
+}
+
+.aurora__item:nth-of-type(1) {
+  top: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-1 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(2) {
+  background-color: var(--clr-3);
+  right: 0;
+  top: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-2 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(3) {
+  background-color: var(--clr-2);
+  left: 0;
+  bottom: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-3 8s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(4) {
+  background-color: var(--clr-4);
+  right: 0;
+  bottom: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-4 24s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-1 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  50% {
+    top: 100%;
+    right: 75%;
+  }
+
+  75% {
+    top: 100%;
+    right: 25%;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes aurora-2 {
+  0% {
+    top: -50%;
+    left: 0%;
+  }
+
+  60% {
+    top: 100%;
+    left: 75%;
+  }
+
+  85% {
+    top: 100%;
+    left: 25%;
+  }
+
+  100% {
+    top: -50%;
+    left: 0%;
+  }
+}
+
+@keyframes aurora-3 {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+
+  40% {
+    bottom: 100%;
+    left: 75%;
+  }
+
+  65% {
+    bottom: 40%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes aurora-4 {
+  0% {
+    bottom: -50%;
+    right: 0;
+  }
+
+  50% {
+    bottom: 0%;
+    right: 40%;
+  }
+
+  90% {
+    bottom: 50%;
+    right: 25%;
+  }
+
+  100% {
+    bottom: -50%;
+    right: 0;
+  }
+}
+
+@keyframes aurora-border {
+  0% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+
+  25% {
+    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+  }
+
+  50% {
+    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+  }
+
+  75% {
+    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+  }
+
+  100% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
     </style>
 </head>
 <body>
     <header>
-        <h1 style="font-family: 'ChonkyBrush', sans-serif; font-size:450%; font-weight:300; letter-spacing:0.01em; line-height:1.2; padding-top:90px; text-align:center;">Ather Niyargar</h1>
-        <p style="font-family: 'cascadia', sans-serif; font-size:200%; display:inline; padding-bottom:50%;">Software Developer<div class = "blink">_</div>
+	<div class="content">
+  <h1 class="title" style="font-family: 'ChonkyBrush', sans-serif; font-weight:300; letter-spacing:0.01em; line-height:1.2; padding-top:90px; font-size: calc(50px + 2vw);">Ather Niyargar
+    <div class="aurora">
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+    </div>
+  </h1>
+</div>
+
+        <p style="font-family: 'cascadia', sans-serif; font-size:180%; display:inline;">Software Developer<div class = "blink">_</div>
 		</p>
 		<div style="font-family:'cascadia'; text-align:center; justify-content:center; padding-bottom:8%; font-family:cascadia;">
-		<p style="padding-top:5%; font-family:cascadia; font-size: 150%;;">My name is Ather Niyargar, and I am from Chittorgarh.</p>
+		
+		<p style="padding-top:2.5%; font-family:cascadia; font-size: 150%;;">My name is Ather Niyargar.</p>
 		<p style="font-family:cascadia; font-size: 150%;">I am a BCA Graduate from Chittorgarh, having a strong programming foundation built with C programming.</p>
 		<p style="font-family:cascadia; font-size: 150%;">I have made projects in C, C++, Java, Python, C#, and Dart.</p>
 		
@@ -162,23 +405,23 @@
     <div class="container">
         <div class="project">
             <div class="project-image">
-                <img src="/api/placeholder/400/300" alt="Project 1">
+                <img src="SPRITES/HR_Badges.webp" alt="Project 1">
             </div>
             <div class="project-info">
-                <h2 class="project-title">E-commerce Platform</h2>
-                <p class="project-description">A full-featured e-commerce platform built with modern technologies. Includes user authentication, product management, and payment integration.</p>
-                <p class="project-tech">Technologies: React, Node.js, MongoDB</p>
+                <h2 class="project-title">Hackerrank</h2>
+                <p class="project-description">I have completed 5-stars in CPP and 4 stars in C and Python in Hackerrank. You can find my profile below:</p>
+                <p class="project-tech"><a href="https://www.hackerrank.com/AtherNiyargar" target = "_blank" style="text-decoration:none; color:white;">hackerrank ➡️ AtherNiyargar</a></p>
             </div>
         </div>
 
         <div class="project">
             <div class="project-image">
-                <img src="/api/placeholder/400/300" alt="Project 2">
+                <img src="SPRITES/Password_checker.png" alt="Project 2">
             </div>
             <div class="project-info">
-                <h2 class="project-title">Task Management App</h2>
-                <p class="project-description">A collaborative task management application with real-time updates and team functionality.</p>
-                <p class="project-tech">Technologies: Vue.js, Firebase, Express</p>
+                <h2 class="project-title">Strong Password Checker🔒</h2>
+                <p class="project-description">A console based program made in C lang, that checks if a password is strong or not. Check it out:</p>
+                <p class="project-tech"><a href="https://github.com/AtherNiyargar/Projects/tree/93ffca43dc881af595720065f48d6ec844083865/password_checker_in_c" target = "_blank" style="text-decoration:none; color:white;">Github ➡️ Password_Checker</a></p>
             </div>
         </div>
 
