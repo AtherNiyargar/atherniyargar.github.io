@@ -46,16 +46,17 @@
             max-width: 90%;
 			height: 25%;
             margin: 0 auto;
-            padding: 2rem;
+            <!-- padding: 20rem; -->
+			
         }
 
         .project {
             display: flex;
             align-items: center;
             background: #142f40;
-            border-radius: 10px;
+            border-radius: 40px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            margin-bottom: 2%;
             overflow: hidden;
         }
 
@@ -64,14 +65,16 @@
         }
 
         .project-image {
-            flex: 0.5;
+            flex: 0.5	;
             padding: 1rem;
         }
 
         .project-image img {
             width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 5%;
+			margin-top: 1%;
+			
         }
 
         .project-info {
@@ -106,15 +109,17 @@
             color: white;
             text-align: center;
             <!-- padding: 2rem; -->
-            margin-top: 2rem;
+            margin: 2rem;
 			width: 100%;
+						
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
+			padding: 2%;
+			align-items: center;
+            
         }
 
         .contact-info a {
@@ -123,7 +128,7 @@
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -369,9 +374,11 @@ body {
   }
 }
 
-		
-		
-		
+.contact_divs{
+padding-right:2%;
+width: 180px;
+}
+
 		
 		
 		
@@ -406,13 +413,13 @@ body {
     </header>
 
     <div class="container">
-        <div class="project">
+        <div class="project" style="margin-top:2%;">
             <div class="project-image">
                 <img src="SPRITES/HR_Badges.webp" alt="Project 1">
             </div>
             <div class="project-info">
                 <h2 class="project-title">Hackerrank</h2>
-                <p class="project-description">I have completed 5 stars in C++ and 4 stars in both C and Python on HackerRank, demonstrating a strong proficiency in these programming languages. You can find my profile below:</p>
+                <p class="project-description">I have completed 5 stars in C++ and 4 stars in both C and Python on HackerRank, demonstrating a strong proficiency in these programming languages. I have solved problems that contains algorithm, data-structure, mathematics, and pattern making challenges. You can find my profile below:</p>
                 <p class="project-tech"><a href="https://www.hackerrank.com/AtherNiyargar" target = "_blank" style="text-decoration:none; color:white;">hackerrank ➡️ AtherNiyargar</a></p>
             </div>
         </div>
@@ -443,10 +450,46 @@ body {
     <footer>
         <h2>Contact Me</h2>
         <div class="contact-info">
-            <a href="mailto:atherniargar@gmail.com">atherniargar@gmail.com</a>
-            <a href="https://github.com/AtherNiyargar">GitHub: @AtherNiyargar</a>
-            <a href="https://linkedin.com/in/AtherNiyargar">LinkedIn: Ather Niyargar</a>
-            <a href="tel:+919024779695">Phone: +91 9024779695</a>
+		
+			<div class = "contact_divs">
+				<a target="_blank"; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-gmail-logo-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="mailto:atherniargar@gmail.com"><p>Gmail: atherniargar@gmail.com</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="https://www.github.com/AtherNiyargar"><img src="ICONS/icons8-github-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.github.com/AtherNiyargar"><p>Github: AtherNiyargar</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-linkedin-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="mailto:atherniargar@gmail.com"><p>LinkedIn: AtherNiyargar</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="https://wa.me/+919024779695"><img src="ICONS/icons8-whatsapp-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="tel:+919024779695"><p>Whatsapp: +91 9024779695</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="#"><img src="ICONS/icons8-facebook-circled-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="#"><p>Facebook: AtherNiyargarReal</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="https://www.instagram.com/AtherNiyargar"><img src="ICONS/icons8-instagram-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.instagram.com/AtherNiyargar"><p>Instagram: atherniyargar</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="https://t.me/AtherNiyargar"><img src="ICONS/icons8-telegram-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="https://t.me/AtherNiyargar"><p>Telegram: AtherNiyargar</p></a>
+			</div>
+			
+			<div class = "contact_divs">
+				<a target="_blank"; href="https://www.twitter.com/AtherNiyargar"><img src="ICONS/icons8-twitter-circled-1500.png" style="width:40px; height:auto;"></a>
+				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.twitter.com/AtherNiyargar"><p>Twitter: AtherNiyargar</p></a>
+			</div>
         </div>
     </footer>
 </body>
