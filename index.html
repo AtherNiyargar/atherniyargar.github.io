@@ -1,508 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ather Niyargar</title>
-    <style>
-	
-	@font-face {
-    font-family: 'ChonkyBrush';
-    src: url('FONT/Chonky Brush.ttf') format('truetype');
-	}
-	
-	@font-face {
-    font-family: 'cascadia';
-    src: url('FONT/CascadiaCode-Regular-VTT.ttf') format('truetype');
-	}
-	
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ather Niyargar</title>
+  <style>
+    @font-face {
+      font-family: 'ChonkyBrush';
+      src: url('FONT/Chonky Brush.ttf') format('truetype');
+    }
 
-        body {
-            background-color: #ffa20014;
-            line-height: 1.6;
-        }
+    @font-face {
+      font-family: 'cascadia';
+      src: url('FONT/CascadiaCode-Regular-VTT.ttf') format('truetype');
+    }
 
-        header {
-            background-color: #000000;;
-            color: white;
-            text-align: center;
-			width: 100%;
-            <-- padding: 2rem; -->
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-			text-align:center;
-        }
+    body {
+      background-color: #ffa20014;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 90%;
-			height: 25%;
-            margin: 0 auto;
-            <!-- padding: 20rem; -->
-			
-        }
+    header {
+      background-color: #000000;
+      ;
+      color: white;
+      text-align: center;
+      width: 100%;
+      <-- padding: 2rem;
+      -->
+    }
 
-        .project {
-            display: flex;
-            align-items: center;
-            background: #142f40;
-            border-radius: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 2%;
-            overflow: hidden;
-        }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-        .project:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+    .container {
+      max-width: 90%;
+      height: 25%;
+      margin: 0 auto;
+      < !-- padding: 20rem;
+      -->
+    }
 
-        .project-image {
-            flex: 0.5	;
-            padding: 1rem;
-        }
+    .project {
+      display: flex;
+      align-items: center;
+      background: #142f40;
+      border-radius: 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2%;
+      overflow: hidden;
+    }
 
-        .project-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 5%;
-			margin-top: 1%;
-			
-        }
+    .project:nth-child(even) {
+      flex-direction: row-reverse;
+    }
 
-        .project-info {
-            flex: 1;
-            padding: 2rem;
-        }
+    .project-image {
+      flex: 0.5;
+      padding: 1rem;
+    }
 
-        .project-title {
-            color: #f1f6f6;
-            margin-bottom: 1rem;
-			
-        }
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5%;
+      margin-top: 1%;
 
-        .project-description {
-            color: #fa9374;
-            margin-bottom: 1rem;
-			font-family: 'cascadia';
-			font-size: 125%;
-        }
+    }
 
-        .project-tech {
-            color: #2c3e50;
-            font-weight: bold;
-			transition: font-size 0.1s ease;
-        }
-		.project-tech:hover{
-		font-size:150%;
-		}
-		
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            <!-- padding: 2rem; -->
-            margin: 2rem;
-			width: 100%;
-						
-        }
+    .project-info {
+      flex: 1;
+      padding: 2rem;
+    }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-			padding: 2%;
-			align-items: center;
-            
-        }
+    .project-title {
+      color: #f1f6f6;
+      margin-bottom: 1rem;
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-        }
+    }
 
-        .contact-info a:hover {
-            text-decoration: none;
-        }
+    .project-description {
+      color: #fa9374;
+      margin-bottom: 1rem;
+      font-family: 'cascadia';
+      font-size: 125%;
+    }
 
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column !important;
-            }
+    .project-tech {
+      color: #2c3e50;
+      font-weight: bold;
+      transition: font-size 0.1s ease;
+    }
 
-            .project-image, .project-info {
-                width: 100%;
-            }
+    .project-tech:hover {
+      font-size: 150%;
+    }
 
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-		
-		
-		.blink {
-            font-size: 40px;
-            font-family: cascadia; /* Monospace font for the underscore */
-            display: inline-block;
-            animation: blink-animation 1s step-start infinite; /* Apply animation */
-			display:inline-block;
-        }
-		@keyframes blink-animation {
-            50% {
-                opacity: 0; /* Makes the underscore invisible at halfway point */
-            }
-        }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      < !-- padding: 2rem;
+      -->margin: 2rem;
+      width: 100%;
 
-:root {
-  --clr-1: #00c2ff;
-  --clr-2: #0062ff;
-  --clr-3: #52ff4c;
-  --clr-4: #ffc640;
+    }
 
-  --blur: 1rem;
-  --fs: clamp(3rem, 8vw, 7rem);
-  --ls: clamp(-1.75px, -0.25vw, -3.5px);
-}
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      padding: 2%;
+      align-items: center;
 
-body {
-  min-height: 100vh;
-  place-items: center;
-  background-color: var(--bg);
-  color: #fff;
-  font-family: "Inter", "DM Sans", Arial, sans-serif;
-}
+    }
 
-*,
-*::before,
-*::after {
-  font-family: inherit;
-  box-sizing: border-box;
-}
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+    }
 
-.content {
-  text-align: center;
-}
+    .contact-info a:hover {
+      text-decoration: none;
+    }
 
-.title {
-  font-size: var(--fs);
-  font-weight: 800;
-  letter-spacing: var(--ls);
-  position: relative;
-  overflow: hidden;
-  background: var(--bg);
-  margin: 0;
-}
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column !important;
+      }
 
-.aurora {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  mix-blend-mode: darken;
-  pointer-events: none;
-}
+      .project-image,
+      .project-info {
+        width: 100%;
+      }
 
-.aurora__item {
-  overflow: hidden;
-  position: absolute;
-  width: 60vw;
-  height: 60vw;
-  background-color: var(--clr-1);
-  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
-  filter: blur(var(--blur));
-  mix-blend-mode: overlay;
-}
+      .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
 
-.aurora__item:nth-of-type(1) {
-  top: -50%;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-1 12s ease-in-out infinite alternate;
-}
 
-.aurora__item:nth-of-type(2) {
-  background-color: var(--clr-3);
-  right: 0;
-  top: 0;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-2 12s ease-in-out infinite alternate;
-}
+    .blink {
+      font-size: 40px;
+      font-family: cascadia;
+      /* Monospace font for the underscore */
+      display: inline-block;
+      animation: blink-animation 1s step-start infinite;
+      /* Apply animation */
+      display: inline-block;
+    }
 
-.aurora__item:nth-of-type(3) {
-  background-color: var(--clr-2);
-  left: 0;
-  bottom: 0;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-3 8s ease-in-out infinite alternate;
-}
+    @keyframes blink-animation {
+      50% {
+        opacity: 0;
+        /* Makes the underscore invisible at halfway point */
+      }
+    }
 
-.aurora__item:nth-of-type(4) {
-  background-color: var(--clr-4);
-  right: 0;
-  bottom: -50%;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-4 24s ease-in-out infinite alternate;
-}
 
-@keyframes aurora-1 {
-  0% {
-    top: 0;
-    right: 0;
-  }
 
-  50% {
-    top: 100%;
-    right: 75%;
-  }
 
-  75% {
-    top: 100%;
-    right: 25%;
-  }
 
-  100% {
-    top: 0;
-    right: 0;
-  }
-}
 
-@keyframes aurora-2 {
-  0% {
-    top: -50%;
-    left: 0%;
-  }
 
-  60% {
-    top: 100%;
-    left: 75%;
-  }
 
-  85% {
-    top: 100%;
-    left: 25%;
-  }
 
-  100% {
-    top: -50%;
-    left: 0%;
-  }
-}
 
-@keyframes aurora-3 {
-  0% {
-    bottom: 0;
-    left: 0;
-  }
 
-  40% {
-    bottom: 100%;
-    left: 75%;
-  }
 
-  65% {
-    bottom: 40%;
-    left: 50%;
-  }
 
-  100% {
-    bottom: 0;
-    left: 0;
-  }
-}
+    :root {
+      --clr-1: #00c2ff;
+      --clr-2: #0062ff;
+      --clr-3: #52ff4c;
+      --clr-4: #ffc640;
 
-@keyframes aurora-4 {
-  0% {
-    bottom: -50%;
-    right: 0;
-  }
+      --blur: 1rem;
+      --fs: clamp(3rem, 8vw, 7rem);
+      --ls: clamp(-1.75px, -0.25vw, -3.5px);
+    }
 
-  50% {
-    bottom: 0%;
-    right: 40%;
-  }
+    body {
+      min-height: 100vh;
+      place-items: center;
+      background-color: var(--bg);
+      color: #fff;
+      font-family: "Inter", "DM Sans", Arial, sans-serif;
+    }
 
-  90% {
-    bottom: 50%;
-    right: 25%;
-  }
+    *,
+    *::before,
+    *::after {
+      font-family: inherit;
+      box-sizing: border-box;
+    }
 
-  100% {
-    bottom: -50%;
-    right: 0;
-  }
-}
+    .content {
+      text-align: center;
+    }
 
-@keyframes aurora-border {
-  0% {
-    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
-  }
+    .title {
+      font-size: var(--fs);
+      font-weight: 800;
+      letter-spacing: var(--ls);
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+      margin: 0;
+    }
 
-  25% {
-    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
-  }
+    .aurora {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      mix-blend-mode: darken;
+      pointer-events: none;
+    }
 
-  50% {
-    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
-  }
+    .aurora__item {
+      overflow: hidden;
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+      background-color: var(--clr-1);
+      border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+      filter: blur(var(--blur));
+      mix-blend-mode: overlay;
+    }
 
-  75% {
-    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
-  }
+    .aurora__item:nth-of-type(1) {
+      top: -50%;
+      animation: aurora-border 6s ease-in-out infinite,
+        aurora-1 12s ease-in-out infinite alternate;
+    }
 
-  100% {
-    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
-  }
-}
+    .aurora__item:nth-of-type(2) {
+      background-color: var(--clr-3);
+      right: 0;
+      top: 0;
+      animation: aurora-border 6s ease-in-out infinite,
+        aurora-2 12s ease-in-out infinite alternate;
+    }
 
-.contact_divs{
-padding-right:2%;
-width: 180px;
-}
+    .aurora__item:nth-of-type(3) {
+      background-color: var(--clr-2);
+      left: 0;
+      bottom: 0;
+      animation: aurora-border 6s ease-in-out infinite,
+        aurora-3 8s ease-in-out infinite alternate;
+    }
 
-		
-		
-		
-		
-		
-		
-		
-    </style>
-	<link rel="icon" type="image/png" href="SPRITES/favicon.png">
+    .aurora__item:nth-of-type(4) {
+      background-color: var(--clr-4);
+      right: 0;
+      bottom: -50%;
+      animation: aurora-border 6s ease-in-out infinite,
+        aurora-4 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes aurora-1 {
+      0% {
+        top: 0;
+        right: 0;
+      }
+
+      50% {
+        top: 100%;
+        right: 75%;
+      }
+
+      75% {
+        top: 100%;
+        right: 25%;
+      }
+
+      100% {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    @keyframes aurora-2 {
+      0% {
+        top: -50%;
+        left: 0%;
+      }
+
+      60% {
+        top: 100%;
+        left: 75%;
+      }
+
+      85% {
+        top: 100%;
+        left: 25%;
+      }
+
+      100% {
+        top: -50%;
+        left: 0%;
+      }
+    }
+
+    @keyframes aurora-3 {
+      0% {
+        bottom: 0;
+        left: 0;
+      }
+
+      40% {
+        bottom: 100%;
+        left: 75%;
+      }
+
+      65% {
+        bottom: 40%;
+        left: 50%;
+      }
+
+      100% {
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    @keyframes aurora-4 {
+      0% {
+        bottom: -50%;
+        right: 0;
+      }
+
+      50% {
+        bottom: 0%;
+        right: 40%;
+      }
+
+      90% {
+        bottom: 50%;
+        right: 25%;
+      }
+
+      100% {
+        bottom: -50%;
+        right: 0;
+      }
+    }
+
+    @keyframes aurora-border {
+      0% {
+        border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+      }
+
+      25% {
+        border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+      }
+
+      50% {
+        border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+      }
+
+      75% {
+        border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+      }
+
+      100% {
+        border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+      }
+    }
+
+    .contact_divs {
+      padding-right: 2%;
+      width: 180px;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="SPRITES/favicon.png">
 </head>
+
 <body>
-    <header>
-	<div class="content">
-  <h1 class="title" style="font-family: 'ChonkyBrush', sans-serif; font-weight:300; letter-spacing:0.01em; line-height:1.2; padding-top:90px; font-size: calc(50px + 2vw);">Ather Niyargar
-    <div class="aurora">
-      <div class="aurora__item"></div>
-      <div class="aurora__item"></div>
-      <div class="aurora__item"></div>
-      <div class="aurora__item"></div>
-    </div>
-  </h1>
-</div>
-
-        <p style="font-family: 'cascadia', sans-serif; font-size:180%; display:inline;">Software Developer<div class = "blink">_</div>
-		</p>
-		<div style="font-family:'cascadia'; text-align:center; justify-content:center; padding-bottom:8%; font-family:cascadia;">
-		
-		<p style="padding-top:2.5%; font-family:cascadia; font-size: 150%;;">My name is Ather Niyargar.</p>
-		<p style="font-family:cascadia; font-size: 150%;">I am a BCA Graduate from Chittorgarh, having a strong programming foundation built with C programming.</p>
-		<p style="font-family:cascadia; font-size: 150%;">I have made projects in C, C++, Java, Python, C#, and Dart.</p>
-		
-		</div>
-    </header>
-
-    <div class="container">
-        <div class="project" style="margin-top:2%;">
-		
-			<div class="project-image">
-                <img src="SPRITES/Hospital_Management_Java.jpg" alt="Project 3">
-            </div>
-            <div class="project-info">
-                <h2 class="project-title">Hospital Management Application</h2>
-                <p class="project-description">A Hospital Management application that provides facilities for patient's entry, discharge, disease type, age, and basic details and retrieval of the same. It stores the data in a database.</p>
-				<p class="project-description">Technologies used: Java, JDBC, MySQL.</p>
-                <p class="project-tech"><a href="https://github.com/AtherNiyargar/Projects/tree/93ffca43dc881af595720065f48d6ec844083865/Hospital_Management_With%20Database" target = "_blank" style="text-decoration:none; color:white;">Github ➡️ Hospital Management with Database</a></p>
-            </div>
-		
-            
-			
-			
-			
+  <header>
+    <div class="content">
+      <h1 class="title"
+        style="font-family: 'ChonkyBrush', sans-serif; font-weight:300; letter-spacing:0.01em; line-height:1.2; padding-top:90px; font-size: calc(50px + 2vw);">
+        Ather Niyargar
+        <div class="aurora">
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
         </div>
-
-        <div class="project">
-            <div class="project-image">
-                <img src="SPRITES/Password_checker.png" alt="Project 2">
-            </div>
-            <div class="project-info">
-                <h2 class="project-title">Strong Password Checker🔒</h2>
-                <p class="project-description">A console-based program made in C language that checks if a password is strong or not. The program evaluates the strength of a password based on various criteria such as length, character diversity, and complexity. i.e.,  a minimum length of 8 characters, at least one uppercase letter, one lowercase letter, one digit, and one special character (e.g., @, #, $, etc). Check it out:</p>
-                <p class="project-tech"><a href="https://github.com/AtherNiyargar/Projects/tree/93ffca43dc881af595720065f48d6ec844083865/password_checker_in_c" target = "_blank" style="text-decoration:none; color:white;">Github ➡️ Password_Checker</a></p>
-            </div>
-        </div>
-
-        <div class="project">
-		
-		
-            <div class="project-image">
-                <img src="SPRITES/HR_Badges.webp" alt="Project 1">
-            </div>
-            <div class="project-info">
-                <h2 class="project-title">Hackerrank</h2>
-                <p class="project-description">I have completed 5 stars in C++ and 4 stars in both C and Python on HackerRank, demonstrating a strong proficiency in these programming languages. I have solved problems that contains algorithm, data-structure, mathematics, and pattern making challenges. You can find my profile below:</p>
-                <p class="project-tech"><a href="https://www.hackerrank.com/AtherNiyargar" target = "_blank" style="text-decoration:none; color:white;">hackerrank ➡️ AtherNiyargar</a></p>
-            </div>
-			
-			
-        </div>
+      </h1>
     </div>
 
-    <footer>
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-		
-			<div class = "contact_divs">
-				<a target="_blank"; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-gmail-logo-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="mailto:atherniargar@gmail.com"><p>Gmail: atherniargar@gmail.com</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://www.github.com/AtherNiyargar"><img src="ICONS/icons8-github-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.github.com/AtherNiyargar"><p>Github: AtherNiyargar</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-linkedin-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="mailto:atherniargar@gmail.com"><p>LinkedIn: AtherNiyargar</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://wa.me/+919024779695"><img src="ICONS/icons8-whatsapp-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://wa.me/+919024779695"><p>Whatsapp: +91 9024779695</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://www.facebook.com/AtherNiyargarReal"><img src="ICONS/icons8-facebook-circled-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.facebook.com/AtherNiyargarReal"><p>Facebook: AtherNiyargarReal</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://www.instagram.com/AtherNiyargar"><img src="ICONS/icons8-instagram-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.instagram.com/AtherNiyargar"><p>Instagram: atherniyargar</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://t.me/AtherNiyargar"><img src="ICONS/icons8-telegram-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://t.me/AtherNiyargar"><p>Telegram: AtherNiyargar</p></a>
-			</div>
-			
-			<div class = "contact_divs">
-				<a target="_blank"; href="https://www.twitter.com/AtherNiyargar"><img src="ICONS/icons8-twitter-circled-1500.png" style="width:40px; height:auto;"></a>
-				<a style="text-decoration:none; color:white;" target="_blank"; href="https://www.twitter.com/AtherNiyargar"><p>Twitter: AtherNiyargar</p></a>
-			</div>
-        </div>
-    </footer>
+    <p style="font-family: 'cascadia', sans-serif; font-size:180%; display:inline;">Software Developer
+    <div class="blink">_</div>
+    </p>
+    <div
+      style="font-family:'cascadia'; text-align:center; justify-content:center; padding-bottom:8%; font-family:cascadia;">
+
+      <p style="padding-top:2.5%; font-family:cascadia; font-size: 150%;;">My name is Ather Niyargar.</p>
+      <p style="font-family:cascadia; font-size: 150%;">I am a BCA Graduate from Chittorgarh, having a strong
+        programming foundation built with C programming.</p>
+      <p style="font-family:cascadia; font-size: 150%;">I have made projects in C, C++, Java, Python, C#, and Dart.</p>
+
+    </div>
+  </header>
+
+  <div class="container">
+
+
+
+    <div class="project" style="margin-top:2%;">
+
+      <div class="project-image">
+        <img src="SPRITES/Python_YT_Downloader.jpg" alt="Project 4">
+      </div>
+      <div class="project-info">
+        <h2 class="project-title">Youtube to mp3 downloader</h2>
+        <p class="project-description">A simple GUI application to download youtube audio in mp3 format.
+          The app also follows the system theme and changes dark/light theme accordingly.
+        </p>
+        <p class="project-description">Technologies used: Python, tkinter, customtkinter, yt-dpl, ffmpeg.</p>
+        <p class="project-tech"><a
+            href="https://github.com/AtherNiyargar/Projects/tree/99a1263b5011369bec716ce1814b93db2e19b8e2/Youtube%20to%20mp3"
+            target="_blank" style="text-decoration:none; color:white;">Github ➡️ Youtube to mp3 downloader</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+
+      <div class="project-image">
+        <img src="SPRITES/Hospital_Management_Java.jpg" alt="Project 3">
+      </div>
+      <div class="project-info">
+        <h2 class="project-title">Hospital Management Application</h2>
+        <p class="project-description">A Hospital Management application that provides facilities for patient's entry,
+          discharge, disease type, age, and basic details and retrieval of the same. It stores the data in a database.
+        </p>
+        <p class="project-description">Technologies used: Java, JDBC, MySQL.</p>
+        <p class="project-tech"><a
+            href="https://github.com/AtherNiyargar/Projects/tree/93ffca43dc881af595720065f48d6ec844083865/Hospital_Management_With%20Database"
+            target="_blank" style="text-decoration:none; color:white;">Github ➡️ Hospital Management with Database</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-image">
+        <img src="SPRITES/Password_checker.png" alt="Project 2">
+      </div>
+      <div class="project-info">
+        <h2 class="project-title">Strong Password Checker🔒</h2>
+        <p class="project-description">A console-based program made in C language that checks if a password is strong or
+          not. The program evaluates the strength of a password based on various criteria such as length, character
+          diversity, and complexity. i.e., a minimum length of 8 characters, at least one uppercase letter, one
+          lowercase letter, one digit, and one special character (e.g., @, #, $, etc). Check it out:</p>
+        <p class="project-tech"><a
+            href="https://github.com/AtherNiyargar/Projects/tree/93ffca43dc881af595720065f48d6ec844083865/password_checker_in_c"
+            target="_blank" style="text-decoration:none; color:white;">Github ➡️ Password_Checker</a></p>
+      </div>
+    </div>
+
+    <div class="project">
+
+
+      <div class="project-image">
+        <img src="SPRITES/HR_Badges.webp" alt="Project 1">
+      </div>
+      <div class="project-info">
+        <h2 class="project-title">Hackerrank</h2>
+        <p class="project-description">I have completed 5 stars in C++ and 4 stars in both C and Python on HackerRank,
+          demonstrating a strong proficiency in these programming languages. I have solved problems that contains
+          algorithm, data-structure, mathematics, and pattern making challenges. You can find my profile below:</p>
+        <p class="project-tech"><a href="https://www.hackerrank.com/AtherNiyargar" target="_blank"
+            style="text-decoration:none; color:white;">hackerrank ➡️ AtherNiyargar</a></p>
+      </div>
+
+
+    </div>
+  </div>
+
+  <footer>
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-gmail-logo-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="mailto:atherniargar@gmail.com">
+          <p>Gmail: atherniargar@gmail.com</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://www.github.com/AtherNiyargar"><img src="ICONS/icons8-github-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="https://www.github.com/AtherNiyargar">
+          <p>Github: AtherNiyargar</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="mailto:atherniargar@gmail.com"><img src="ICONS/icons8-linkedin-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="mailto:atherniargar@gmail.com">
+          <p>LinkedIn: AtherNiyargar</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://wa.me/+919024779695"><img src="ICONS/icons8-whatsapp-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="https://wa.me/+919024779695">
+          <p>Whatsapp: +91 9024779695</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://www.facebook.com/AtherNiyargarReal"><img
+            src="ICONS/icons8-facebook-circled-1500.png" style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ;
+          href="https://www.facebook.com/AtherNiyargarReal">
+          <p>Facebook: AtherNiyargarReal</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://www.instagram.com/AtherNiyargar"><img src="ICONS/icons8-instagram-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="https://www.instagram.com/AtherNiyargar">
+          <p>Instagram: atherniyargar</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://t.me/AtherNiyargar"><img src="ICONS/icons8-telegram-1500.png"
+            style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="https://t.me/AtherNiyargar">
+          <p>Telegram: AtherNiyargar</p>
+        </a>
+      </div>
+
+      <div class="contact_divs">
+        <a target="_blank" ; href="https://www.twitter.com/AtherNiyargar"><img
+            src="ICONS/icons8-twitter-circled-1500.png" style="width:40px; height:auto;"></a>
+        <a style="text-decoration:none; color:white;" target="_blank" ; href="https://www.twitter.com/AtherNiyargar">
+          <p>Twitter: AtherNiyargar</p>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
